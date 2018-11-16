@@ -2,10 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Practica git</title>
+    <title>TAREA GIT</title>
   </head>
   <body>
     <script>
+    var op;
+    op= prompt("Ingrese una de las opciones(1.-MostrarComprendidos. 2.-NumeroMayor. 3.-Perimetro. 4.-Variables. 5.-Promedio. 6.-Suma.",'')
+    switch (op) {
+      case '1':
     function mostrarComprendidos(x1,x2){
       var i;
       for(i=x1;i<=x2;i++){
@@ -17,15 +21,118 @@
     v1=parseInt(v1);
     v2 = parseInt(prompt('ingreesa valor superios',''));
     mostrarComprendidos(v1,v2);
+    break;
+    case '2':
+    function numeroMayor(n1,n2,n3)
+     {
+       if (n1>n2 && n1>n3)
+       {
+         return n1;
+       }
+       else
+       {
+         if (n2>n3)
+         {
+           return n2;
+         }
+         else
+         {
+           return n3;
+         }
+       }
+     }
 
+     var digito1,digito2,digito3;
+     digito1=parseInt(prompt('Ingrese el primer numero:',''));
+     digito2=parseInt(prompt('Ingrese el segundo numero:',''));
+     digito3=parseInt(prompt('Ingrese el tercer numero:',''));
+     var resultado;
+     resultado=numeroMayor(digito1,digito2,digito3);
+     document.write('El mayor de los tres es :'+resultado);
+  break;
+  case '3':
+  function PerimetroCuadrado(l)
+  {
+     var per;
+     per=l*4;
+     return per;
+  }
+  var l;
+  l=parseInt(prompt('Ingrese un lado:',''));
+  document.write('El resultado es:'+PerimetroCuadrado(l));
+  break;
+  case '4':
+  function numeroVariables(v)
+  {
+    if (v<10)
+    {
+      return 1;
+    }
+    else
+    {
+      if (v<100)
+      {
+        return 2;
+      }
+      else
+      {
+        if (v<1000)
+        {
+          return 3;
+        }
+        else
+        {
+          if (v<10000)
+          {
+            return 4;
+          }
+          else
+          {
+            if (v<100000)
+            {
+              return 5;
+            }
+          }
+        }
+      }
+    }
+  }
+  var dig;
+  dig=parseInt(prompt('Ingrese un numero de 5 digitos:',''));
+  document.write('La digitos ingresados son:'+numeroVariables(dig));
+  break;
+  case'5':
+  function numeroPromedio(num1,num2,num3)
+  {
+    var promedio=(num1+num2+num3)/3;
+    return promedio;
+  }
 
-
-
-
-
-
-
-
+  var val1,val2,val3;
+  val1=parseInt(prompt('Ingrese el primer numero:',''));
+  val2=parseInt(prompt('Ingrese el segundo numero:',''));
+  val3=parseInt(prompt('Ingrese el tercer numero:',''));
+  var resul;
+  resul=numeroPromedio(val1,val2,val3);
+  document.write('El promedio es :'+resul);
+  break;
+  case '6':
+  function Valores()
+  {
+    var suma=0;
+    var dato;
+    var i;
+    for(i=1;i<=5;i++)
+    {
+      dato=parseInt(prompt('Ingrese un numero:',''));
+      suma=suma+dato;
+    }
+    return suma;
+  }
+  var solucion=Valores();
+  document.write('La suma es: '+ solucion);
+  break;
+}
     </script>
   </body>
 </html>
